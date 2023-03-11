@@ -1,0 +1,992 @@
+body{
+    background-color: #E9EDF5;
+}
+
+/*
+SideList designs
+ */
+@font-face {
+    font-family: "Worker Tool Family";
+    src: url("../fonts/ProximaSoft-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Worker Header Family";
+    src: url("../fonts/avenirnextcyr-light.ttf") format("truetype");
+}
+
+
+.worker-sidelist{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #4A5864;
+    width: 220px;
+    height: 100vh;
+}
+.worker-sidelist-header{
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    height: 80px;
+    background-color: #37414A;
+}
+.worker-sidelist-header h2{
+    font: 3em "Worker Tool Family";
+    font-weight: bold;
+    color: #ffffff;
+}
+.worker-sidelist.footer{
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+.worker-sidelist.footer button{
+    margin: 5px;
+}
+
+.worker-sidelist-body{
+    display: flex;
+}
+.worker-sidelist-tool{
+    display: inherit;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: flex-end;
+    background-color: #4A5864;
+    color: #C7D4E0;
+    font: 1.1em "Worker Tool Family", bold;
+    transition: 0.5s ease-in-out;
+}
+
+.worker-sidelist-tool:hover{
+    background-color:#667F8B ;
+}
+
+.worker-sidelist-tool-icon{
+    margin-right: 15px;
+}
+
+/*
+Worker
+ */
+.worker-page{
+    display: flex;
+}
+/*
+Area
+ */
+
+.worker-area{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.worker-area-scene{
+    display: inherit;
+    flex-direction: column;
+    margin: 20px 35px 20px 35px;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    border: 1px #E9EDF5 solid;
+    border-radius: 2px;
+}
+.worker-area-scene.client.main{
+    padding: 10px;
+    flex-direction: row;
+}
+
+.worker-area-user-header{
+    display: flex;
+    position: relative;
+    height: 70px;
+    background-color: #FFFFFF;
+    border-bottom: 1px #E9EDF5 solid;
+    justify-content: flex-end;
+    align-items: center;
+}
+.worker-area-user-header button{
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    font: 1.2em "Worker Tool Family";
+}
+
+.worker-area-user-header-button-icon{
+    margin-right: 5px;
+    stroke-width: 10px;
+}
+
+.worker-area-user-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.worker-area-user{
+    display: flex;
+    background-color: inherit;
+    min-height: 50px;
+    border-bottom: 1px #E9EDF5 solid;
+}
+.area-user-column{
+    display:flex;
+
+    border-right: 1px #E9EDF5 solid;
+}
+.area-user-column.first{
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+.area-user-column.second{
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    max-width: 400px;
+}
+.area-user-column.third{
+    justify-content: flex-end;
+    align-items: center;
+    width: 150px;
+}
+.area-user-column.forth{
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+}
+.area-user-column.fifth{
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    color: #D4DEE7;
+    border-right: none;
+    transition: 0.4s ease-in-out;
+}
+
+.area-user-column.fifth:hover{
+    color: #a9b2b6;
+}
+/*
+Area settings
+ */
+
+.area-settings{
+    display: inherit;
+    flex-direction: column;
+    margin: 20px 35px 20px 35px;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    border: 1px #E9EDF5 solid;
+    border-radius: 2px;
+    overflow: auto;
+    height: 0;
+}
+.area-settings-header{
+    position: sticky;
+    top:0;
+    display: flex;
+    height: 50px;
+    font: 2em "Worker Header Family";
+    margin: 5px;
+    border-bottom: 1px #E9EDF5 solid;
+    background-color: white;
+}
+.area-settings-header-content{
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+.settings-scene{
+    display: flex;
+    padding: 30px;
+}
+.settings-info-box{
+   margin: 20px 50px 50px 50px;
+}
+.settings-field{
+    width: 250px;
+    margin-bottom: 5px;
+}
+.settings-field.checkbox{
+    margin: 10px 0 10px 0;
+}
+.settings-field.checkbox p{
+    margin-right: 10px;
+}
+.settings-field-header{
+    font: 1.5em "Worker Header Family";
+    margin-bottom: 10px;
+}
+
+/**
+Settings field date start
+ */
+.settings-field.date.scene{
+    display: flex;
+}
+.settings-field.date.scene.box{
+    display: flex;
+    flex-direction: column;
+    width: 65px;
+    margin-right: 5px;
+    font-size: 0.9em;
+}
+.settings-field.date.scene.box:last-child{
+    width:100px;
+}
+/*
+Settings field date end
+ */
+
+.user-private-info-date{
+    display: flex;
+}
+.user-private-info-date div{
+    width: 50px;
+    margin-right: 10px;
+}
+.settings-list-field{
+    width: 250px;
+}
+#settings-list-field-main{
+    display: flex;
+    flex-direction: row;
+}
+#selected-items{
+
+}
+
+.area-settings-footer{
+    margin: 20px;
+    display: flex;
+    justify-content: flex-end;
+    border-top:1px #E9EDF5 solid;;
+
+}
+.area-settings-footer button{
+    position: relative;
+    margin: 20px;
+    width: 100px;
+    height: 50px;
+    right: 120px;
+}
+
+/*
+Header
+*/
+
+.worker-area-header{
+    display: flex;
+    background-color: #FFFFFF;
+    height: 80px;
+    border-bottom: 1px #D8DBE3 solid;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.worker-header-title{
+    font: 2em "Worker Header Family";
+    color: #BBC4CC;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/*
+Account start
+ */
+.worker-area.account{
+    display: inherit;
+    flex-direction: column;
+    margin: 20px 35px 20px 35px;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    border: 1px #E9EDF5 solid;
+    border-radius: 2px;
+}
+.worker-area.account{
+    display: inherit;
+    flex-direction: column;
+    margin: 20px 35px 20px 35px;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    border: 1px #E9EDF5 solid;
+    border-radius: 2px;
+    overflow: auto;
+    height: 0;
+}
+.storage-filter{
+    border-bottom: 1px #E9EDF5 solid;
+    padding: 5px;
+}
+.storage-filter select{
+    width: 200px
+}
+.storage-deposit-lists{
+    display: flex;
+    flex-direction: row;
+}
+.storage-deposit-lists.labels{
+    border-bottom: 1px #E9EDF5 solid;
+    height: 50px;
+}
+.deposit-list.labels{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.deposit-list.fields{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.storage-deposit-lists.fields{
+    height: 40px;
+    border-bottom: 1px #E9EDF5 solid;
+}
+
+/*
+Percent labels and fields
+ */
+.deposit-list.percent.labels.number{
+    width: 15%;
+}
+.deposit-list.percent.labels.ID{
+    width: 10%;
+}
+.deposit-list.percent.labels.startDate{
+    width: 12.5%;
+}
+.deposit-list.percent.labels.endDate{
+    width: 12.5%;
+}
+.deposit-list.percent.labels.percentValue{
+    width:10%;
+}
+.deposit-list.percent.labels.percentage{
+    width: 10%;
+}
+.deposit-list.percent.labels.collectedMoney{
+    width: 10%;
+}
+.deposit-list.percent.labels.money{
+    width: 10%;
+}
+.deposit-list.percent.labels.balance{
+    width: 10%;
+}
+
+
+/*
+Percent labels and fields
+END
+ */
+
+/* Percent fields start*/
+.deposit-list.percent.fields.number{
+    width: 15%;
+    border-right:  1px #E9EDF5 solid;
+}
+.deposit-list.percent.fields.ID{
+    width: 10%;
+    border-right:  1px #E9EDF5 solid;
+}
+.deposit-list.percent.fields.startDate{
+    width: 12.5%;
+    border-right:  1px #E9EDF5 solid;
+}
+.deposit-list.percent.fields.endDate{
+    width: 12.5%;
+    border-right:  1px #E9EDF5 solid;
+}
+.deposit-list.percent.fields.percentValue{
+    width:10%;
+    border-right:  1px #E9EDF5 solid;
+}
+.deposit-list.percent.fields.money{
+    width: 10%;
+    border-right:  1px #E9EDF5 solid;
+}
+.deposit-list.percent.fields.collectedMoney{
+    width: 10%;
+    border-right:  1px #E9EDF5 solid;
+}
+.deposit-list.percent.fields.percentage{
+    width: 10%;
+    border-right:  1px #E9EDF5 solid;
+}
+.deposit-list.percent.fields.balance{
+    width: 10%;
+}
+/* Percent fields end*/
+
+
+/* Current account labels start*/
+
+.deposit-list.current.labels.number{
+    width: 25%;
+}
+.deposit-list.current.labels.ID{
+    width: 10%;
+}
+.deposit-list.current.labels.startDate{
+    width: 25%;
+}
+.deposit-list.current.labels.endDate{
+    width: 25%;
+}
+.deposit-list.current.labels.money{
+    width: 15%;
+}
+/* Current account labels end*/
+
+/* Current account fields start*/
+.deposit-list.current.fields.number{
+    width: 25%;
+    border-right:  1px #E9EDF5 solid;
+}
+.deposit-list.current.fields.ID{
+    width: 10%;
+    border-right:  1px #E9EDF5 solid;
+}
+.deposit-list.current.fields.startDate{
+    width: 25%;
+    border-right:  1px #E9EDF5 solid;
+}
+.deposit-list.current.fields.endDate{
+    width: 25%;
+    border-right:  1px #E9EDF5 solid;
+}
+.deposit-list.current.fields.money{
+    width: 15%;
+}
+/* Current account fields end*/
+
+
+/*Credit account header start*/
+.storage-credit-lists{
+    display: flex;
+    flex-direction: row;
+}
+.storage-credit-lists.labels{
+    border-bottom: 1px #E9EDF5 solid;
+    height: 50px;
+}
+.credit-list.labels{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.credit-list.labels.number{
+width: 10%;
+}
+.credit-list.labels.ID{
+    width: 10%;
+}
+.credit-list.labels.type{
+    width: 15%;
+}
+.credit-list.labels.startDate{
+    width: 10%;
+}
+.credit-list.labels.endDate{
+    width: 10%;
+}
+.credit-list.labels.percent{
+    width: 5%;
+}
+.credit-list.labels.money{
+    width: 10%;
+}
+.credit-list.labels.debit{
+    width: 10%;
+}
+.credit-list.labels.credit{
+    width: 10%;
+}
+.credit-list.labels.balance{
+    width: 10%;
+}
+/*Credit account header end*/
+
+
+.storage-credit-lists.fields{
+    height: 40px;
+    border-bottom: 1px #E9EDF5 solid;
+}
+.credit-list.field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.credit-list.field.number{
+    width: 10%;
+    border-right:  1px #E9EDF5 solid;
+}
+.credit-list.field.ID{
+    width: 10%;
+    border-right:  1px #E9EDF5 solid;
+}
+.credit-list.field.type{
+    width: 15%;
+    border-right:  1px #E9EDF5 solid;
+}
+.credit-list.field.startDate{
+    width: 10%;
+    border-right:  1px #E9EDF5 solid;
+}
+.credit-list.field.endDate{
+    width: 10%;
+    border-right:  1px #E9EDF5 solid;
+}
+.credit-list.field.percent{
+    width: 5%;
+    border-right:  1px #E9EDF5 solid;
+}
+.credit-list.field.money{
+    width: 10%;
+    border-right:  1px #E9EDF5 solid;
+}
+.credit-list.field.debit{
+    width: 10%;
+    border-right:  1px #E9EDF5 solid;
+}
+.credit-list.field.credit{
+    width: 10%;
+    border-right:  1px #E9EDF5 solid;
+}
+.credit-list.field.balance{
+    width: 10%;
+}
+
+/*
+Account end
+ */
+
+/*BankAccount*/
+
+.worker-area.bankAccount{
+    display: inherit;
+    flex-direction: row;
+    margin: 20px 35px 20px 35px;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    border: 1px #E9EDF5 solid;
+    border-radius: 2px;
+}
+.bank-account-area{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 500px;
+    background-color: #EFF4F5;
+    border-radius:10px ;
+    margin: 20px;
+}
+
+/*Client design start start*/
+.client-area-header{
+    display: flex;
+    border-bottom: 1px #D8DBE3 solid;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
+.client-area-header button{
+    margin-right: 20px;
+    height: 35px;
+    font: 1em "Worker Tool Family";
+}
+.client-area-header h3{
+    font: 1.9em "Worker Header Family";
+    color: #BBC4CC;
+    margin-left: 10px;
+}
+.client-area-body{
+    display: flex;
+    position: relative;
+    left: 30px;
+}
+.credit-card-form-body{
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+}
+.credit-card-form-header{
+    height: 10%;
+    border-bottom: 1px #E9EDF5 solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.credit-card-form-header h3{
+    font: 2em "Worker Header Family"
+}
+.credit-card-form-footer{
+    display: flex;
+    height: 15%;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 1px #E9EDF5 solid;
+}
+.credit-card-form{
+    background-color: #FFFFFF;
+    margin: 30px 400px 40px 400px;
+    flex-grow: 1;
+    display: flex;
+    padding: 0 30px 10px 30px;
+}
+
+.form-body.date{
+    display: flex;
+}
+.form-body{
+    width: 350px;
+    margin-bottom: 5px;
+}
+.form-body.date p{
+    font: 2em "Worker Tool Family";
+    color: black;
+    margin: 0 7px 0 7px;
+}
+.form-body.date div{
+    width: 60px;
+}
+
+.credit-card{
+    width: 450px;
+    height: 250px;
+    position: relative;
+    border-radius: 20px;
+}
+.credit-card.front{
+    background-color: #F0F0ED;
+    border: 1px #D4D0CA solid;
+    z-index: 2;
+    padding: 15px
+}
+.credit-card-body{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.credit-card-body label{
+    position: relative;
+    font: 0.9em "Worker Tool Family";
+    top: 10px;
+    color: black;
+}
+.credit-card-footer{
+    display: flex;
+    height: 30%;
+}
+.credit-card-footer p{
+    font: 2em "Worker Tool Family";
+    color: #CFD0D0;
+    margin: 0 7px 0 7px;
+}
+.credit-card-field.date{
+    width:60px
+}
+
+.credit-card.back{
+    background-color: #E0DDD7;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 250px;
+    top: 20px;
+    z-index: 1;
+}
+.back-stripe{
+    background-color: #8D8A84;
+    height: 50px;
+    margin-top: 20px;
+}
+.credit-card-code{
+    position: relative;
+    width: 90px;
+    top:50px;
+    right: 40px;
+    align-self: flex-end;
+}
+
+.credit-card-balance{
+    position: relative;
+    left: 250px;
+    width: 300px;
+    height: 450px;
+    background-color: #E0DDD7;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.credit-card-balance h3{
+    font: 1.5em "Worker Header Family";
+}
+.credit-card-balance label{
+    font: 1em "Worker Tool Family";
+}
+.balance-info{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.balance-info-field{
+    margin-top: 20px;
+}
+
+.client-credit-account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-credit-account.header{
+    height: 50px;
+    border-top: 1px #E9EDF5 solid;
+    border-bottom: 1px #E9EDF5 solid;
+}
+.client-deposit-account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-deposit-account.header{
+    height: 50px;
+    border-top: 1px #E9EDF5 solid;
+    border-bottom: 1px #E9EDF5 solid;
+}
+
+
+.client-deposit-account.header.number{
+    width: 20%;
+}
+.client-deposit-account.header.code{
+    width: 10%;
+}
+.client-deposit-account.header.type{
+    width: 25%;
+}
+.client-deposit-account.header.balance{
+    width: 15%;
+}
+.client-deposit-account.header.credit{
+    width: 15%;
+}
+.client-deposit-account.header.debit{
+    width: 15%;
+}
+
+
+
+.client-credit-account.body{
+    height: 40px;
+    border-bottom: 1px #E9EDF5 solid;
+}
+
+.client-deposit-account.body{
+    height: 40px;
+    border-bottom: 1px #E9EDF5 solid;
+}
+
+.client-deposit-account.header.number{
+    width: 20%;
+}
+.client-deposit-account.header.code{
+    width: 10%;
+}
+.client-deposit-account.header.type{
+    width: 25%;
+}
+.client-deposit-account.header.balance{
+    width: 15%;
+}
+.client-deposit-account.header.credit{
+    width: 15%;
+}
+.client-deposit-account.header.debit{
+    width: 15%;
+}
+
+
+
+
+.client-credit-account.header.number{
+    width: 20%;
+}
+.client-credit-account.header.code{
+    width: 10%;
+}
+.client-credit-account.header.type{
+    width: 25%;
+}
+.client-credit-account.header.balance{
+    width: 12%;
+}
+.client-credit-account.header.credit{
+    width: 12%;
+}
+.client-credit-account.header.debit{
+    width: 12%;
+}
+.client-credit-account.header.settings{
+    width: 9%;
+}
+
+/*credit account body*/
+.client-credit-account.body.number{
+    width: 20%;
+    border-right: 1px #E9EDF5 solid;
+}
+.client-credit-account.body.code{
+    width: 10%;
+    border-right: 1px #E9EDF5 solid;
+}
+.client-credit-account.body.type{
+    width: 25%;
+    border-right: 1px #E9EDF5 solid;
+}
+.client-credit-account.body.balance{
+    width: 12%;
+    border-right: 1px #E9EDF5 solid;
+}
+.client-credit-account.body.credit{
+    width: 12%;
+    border-right: 1px #E9EDF5 solid;
+}
+.client-credit-account.body.debit{
+    width: 12%;
+    border-right: 1px #E9EDF5 solid;
+}
+.client-credit-account.body.settings{
+    width: 9%;
+}
+.client-credit-account.body.settings svg{
+    transition: 0.3s ease-in-out;
+}
+.client-credit-account.body.settings svg:hover{
+    color: #77838e;
+}
+.credit-account-settings{
+    right: 15px;
+}
+.client-credit-account-form{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    margin: 20px 400px 30px 400px;
+    min-width: 450px;
+}
+.client-credit-account-form-header{
+    height: 10%;
+    border-bottom: 1px #E9EDF5 solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.client-credit-account-form-header h3{
+    font: 2em "Worker Header Family"
+
+}
+.client-credit-account-form-body{
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+}
+.client-credit-account-form-body-fields{
+    margin-top: 30px;
+}
+.client-credit-account-form-footer{
+    display: flex;
+    height: 15%;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 1px #E9EDF5 solid;
+}
+.client-credit-account-form-footer button{
+    min-height: 40px;
+    max-height: 200px;
+}
+
+.client-main{
+
+    background-color: #EFF4F5;
+    border-radius: 10px;
+}
+
+.client-main.private{
+    width: 300px;
+    height: 400px;
+    margin: 5px;
+    padding: 10px;
+}
+.client-main.passport{
+    background-color: #FFFFFF;
+    height: 290px;
+    display: flex;
+    justify-content: space-between;
+}
+.client-main.passport.first{
+    background-color: #EFF4F5;
+    padding: 10px;
+    flex-grow: 1;
+    margin-right: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.client-main.passport.second{
+    background-color: #EFF4F5;
+    padding: 10px;
+    flex-grow: 1;
+    margin-left: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.client-main.extra{
+    background-color: #FFFFFF;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.client-main.extra.first{
+    background-color: #EFF4F5;
+    padding: 10px;
+    flex-grow: 1;
+    margin-right: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.client-main.extra.first div{
+    width: 200px;
+}
+.client-main.extra.second div{
+    width: 200px;
+}
+.client-main.passport.first div{
+    width: 200px;
+}
+.client-main.passport.second div{
+    width: 200px;
+}
+.client-main.extra.second{
+    background-color: #EFF4F5;
+    padding: 10px;
+    flex-grow: 1;
+    margin-left: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/*Client design start end*/

@@ -1,0 +1,33 @@
+.login-page{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #E9EDF5;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+}
+.login-page.main{
+    width: 500px;
+    height: 300px;
+    background-color: white;
+}
+.login-page.main.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+.login-page.main.header label{
+    font: 2em "Times New Roman";
+}
+.login-page.main.body{
+    flex-grow: 1;
+    justify-content: flex-start;
+    height: 60%;
+    padding: 0 30px 0 30px;
+}
+.login-page.main.footer{
+    height: 20%;
+    padding: 0 30px 0 30px;
+}
