@@ -814,7 +814,30 @@ Account end
     width: 15%;
 }
 
-
+.client-deposit-account.body.number{
+    width: 20%;
+    border-right: 1px #E9EDF5 solid;
+}
+.client-deposit-account.body.code{
+    width: 10%;
+    border-right: 1px #E9EDF5 solid;
+}
+.client-deposit-account.body.type{
+    width: 25%;
+    border-right: 1px #E9EDF5 solid;
+}
+.client-deposit-account.body.balance{
+    width: 15%;
+    border-right: 1px #E9EDF5 solid;
+}
+.client-deposit-account.body.credit{
+    width: 15%;
+    border-right: 1px #E9EDF5 solid;
+}
+.client-deposit-account.body.debit{
+    width: 15%;
+    border-right: 1px #E9EDF5 solid;
+}
 
 
 .client-credit-account.header.number{
@@ -838,6 +861,7 @@ Account end
 .client-credit-account.header.settings{
     width: 9%;
 }
+
 
 /*credit account body*/
 .client-credit-account.body.number{

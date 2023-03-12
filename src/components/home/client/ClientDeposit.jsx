@@ -1,10 +1,8 @@
 import React, {useEffect, useState} from "react";
 import AreaHeader from "../area/users/settings/AreaHeader";
 import {Form} from "react-bootstrap";
-import ClientCreditAccountHeader from "./components/creditAccount/ClientCreditAccountHeader";
 import {useParams} from "react-router-dom";
 import ClientDepositAccountHeader from "./components/depositAccount/ClientDepositAccountHeader";
-import ClientCreditAccountRow from "./components/creditAccount/ClientCreditAccountRow";
 import ClientDepositAccountRow from "./components/depositAccount/ClientDepositAccountRow";
 import axios from "axios";
 
@@ -21,22 +19,21 @@ const ClientDeposit = ()=>{
         console.log(depositAccounts)
         const map = new Map([
             ["1", () => {
-                return depositAccounts.currentAccounts.map((elem, index) => {
+                return depositAccounts?.currentAccounts.map((elem, index) => {
                     if(elem){
                         return <ClientDepositAccountRow context={elem} key={index}/>
                     }
-
                 })
             }],
             ["2", () => {
-                return depositAccounts.percentAccounts.map((elem, index) => {
+                return depositAccounts?.percentAccounts.map((elem, index) => {
                     if(elem){
                         return <ClientDepositAccountRow context={elem} key={index}/>
                     }
                 })
             }]
         ])
-        return map.get(accountID).call(null)
+        return map.get(accountID).apply(null)
     }
 
     useEffect(()=>{
@@ -63,6 +60,7 @@ const ClientDeposit = ()=>{
                     </Form.Select>
                 </Form.Group>
                 <ClientDepositAccountHeader/>
+                {showRows()}
             </div>
         </div>
     )

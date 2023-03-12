@@ -20,10 +20,10 @@ const ClientCredit = ()=>{
         const map = new Map([
             ["1", () => {
                 return creditAccounts.currentAccounts.map((elem, index) => {
+                    console.log(elem)
                     if(elem){
                         return <ClientCreditAccountRow context={elem} key={index}/>
                     }
-
                 })
             }],
             ["2", () => {

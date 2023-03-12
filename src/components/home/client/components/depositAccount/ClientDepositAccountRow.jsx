@@ -6,17 +6,17 @@ const ClientDepositAccountRow = ({context})=>{
         <div className={"client-deposit-account body"}>
             <div className={"client-deposit-account body number"}>
                 <label>
-                    {context?.creditNumber}
+                    {context?.depositNumber}
                 </label>
             </div>
             <div className={"client-deposit-account body code"}>
                 <label>
-                    {context?.creditCode}
+                    {context?.depositCode}
                 </label>
             </div>
             <div className={"client-deposit-account body type"}>
                 <label>
-                    {context?.creditType.type}
+                    {context?.depositType.type}
                 </label>
             </div>
             <div className={"client-deposit-account body balance"}>

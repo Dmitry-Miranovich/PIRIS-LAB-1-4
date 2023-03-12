@@ -7,6 +7,7 @@ const ClientCreditAccountRow = ({context})=>{
 
     const [showDropdown, setShowDropdown] = useState(false);
 
+    console.log(context)
     const location = useLocation()
 
     return(

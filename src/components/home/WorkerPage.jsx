@@ -18,8 +18,8 @@ import axios from "axios";
 
 const WorkerPage = ()=>{
 
-    const toolsNames = ["Customer Service", "Bank Account", "Third"]
-    const icons = [userIcon, warningIcon, dashBoardIcon]
+    const toolsNames = ["Customer Service", "Bank Account"]
+    const icons = [userIcon, warningIcon]
     const absolutePath= "/home"
     const navigate =useNavigate()
     const switchHandler = (id)=>{
@@ -30,10 +30,6 @@ const WorkerPage = ()=>{
             }
             case 2:{
                 navigate(`${absolutePath}/bankAccount`)
-                break
-            }
-            case 3:{
-                navigate(`${absolutePath}/third`)
                 break
             }
         }
